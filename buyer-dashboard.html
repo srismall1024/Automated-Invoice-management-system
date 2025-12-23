@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buyer Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<header>
+  <h2>Buyer Dashboard</h2>
+  <div id="user-info"></div>
+</header>
+
+<div class="card">
+  <h3>Select Seller</h3>
+
+  <div class="seller-grid">
+    <div class="seller-card seller-btn" data-seller="ElectroHub">
+      <img src="assets/tataa.jfif">
+      <h4>ElectroHub</h4>
+    </div>
+
+    <div class="seller-card seller-btn" data-seller="FurniWorld">
+      <img src="assets/furn.jfif">
+      <h4>FurniWorld</h4>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div id="products"></div>
+
+<button id="placeOrderBtn" style="display:none;">
+  Confirm & Place Order
+</button>
+
+<script>
+  const user = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("user-info").innerText =
+    `Logged in as: ${user.company}`;
+</script>
+
+<script type="module" src="invoice.js"></script>
+</body>
+</html>

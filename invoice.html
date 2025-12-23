@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Invoice</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<h2>Create Invoice</h2>
+<input id="company" placeholder="Company Name" />
+<input id="amount" type="number" placeholder="Amount" />
+<label><input type="checkbox" id="gst" /> Add GST (18%)</label>
+<button onclick="generateInvoice()">Generate PDF</button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="invoice.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Seller Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  
+  <header class="topbar">
+    <h2>Seller Dashboard</h2>
+    <div id="user-info" style="font-size: 0.9rem; color: #555;"></div>
+  </header>
+
+  <div id="login-warning" style="display: none; text-align: center; margin-top: 50px; color: red;">
+    <h3>⚠️ You are not logged in.</h3>
+    <p>Please go back to the login page.</p>
+  </div>
+
+  <section class="container" id="dashboard-content" style="display: none;">
+    
+    <div class="report-card" style="display: flex; gap: 20px; padding: 20px; background: #f9f9f9; border: 1px solid #ddd; margin-bottom: 20px; border-radius: 8px;">
+      <div><b>Total Orders:</b> <span id="totalOrders">0</span></div>
+      <div><b>Total Revenue:</b> ₹<span id="totalRevenue">0</span></div>
+      <div><b>Pending Amount:</b> ₹<span id="pendingAmount">0</span></div>
+    </div>
+
+    <h3>Incoming Orders</h3>
+    <table id="ordersTable" border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+      <thead>
+        <tr style="background: #eee;">
+          <th style="padding: 10px;">Invoice No</th>
+          <th style="padding: 10px;">Buyer ID</th>
+          <th style="padding: 10px;">Total</th>
+          <th style="padding: 10px;">Status</th>
+          <th style="padding: 10px;">Action</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        </tbody>
+    </table>
+
+  </section>
+
+  <script type="module" src="seller-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AIMS Payment Gateway</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body style="text-align:center; padding-top: 100px; background-color: #f9f9f9;">
+
+  <div class="card" style="display:inline-block; border:1px solid #ddd; padding:40px; background:white; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <h2 style="margin-bottom: 10px;">Payment Gateway</h2>
+    <p style="color: #666;">Total Amount to Pay:</p>
+    <h1 id="amountDisplay" style="color:#2ecc71; font-size: 3.5rem; margin: 10px 0;">₹0</h1>
+    
+    <button id="payBtn" style="margin-top:20px; padding:15px 50px; background:#3498db; color:white; border:none; border-radius: 5px; cursor:pointer; font-size: 1.2rem; font-weight: bold;">
+      Pay Now
+    </button>
+    
+    <p id="statusMsg" style="margin-top: 25px; min-height: 20px; font-weight: bold; color: #555;"></p>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>
